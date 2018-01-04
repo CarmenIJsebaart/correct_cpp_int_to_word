@@ -2,7 +2,7 @@
 
 Branch|[Travis CI](https://travis-ci.org)|[Codecov](https://www.codecov.io)
 ---|---|---
-master|[![Build Status](https://travis-ci.org/richelbilderbeek/correct_cpp_int_to_word.svg?branch=master)](https://travis-ci.org/richelbilderbeek/correct_cpp_int_to_word)|[![codecov.io](https://codecov.io/github/richelbilderbeek/correct_cpp_int_to_word/coverage.svg?branch=master)](https://codecov.io/github/richelbilderbeek/correct_cpp_int_to_word/branch/master)
+master|[![Build Status](https://travis-ci.org/CarmenIJsebaart/correct_cpp_int_to_word.svg?branch=master)](https://travis-ci.org/CarmenIJsebaart/correct_cpp_int_to_word)|[![codecov.io](https://codecov.io/github/CarmenIJsebaart/correct_cpp_int_to_word/coverage.svg?branch=master)](https://codecov.io/github/CarmenIJsebaart/correct_cpp_int_to_word/branch/master)
 
 [Correct C++](https://github.com/richelbilderbeek/correct_cpp) chapter 'Hello CLI'.
 
