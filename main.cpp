@@ -1,16 +1,17 @@
+#include <cassert>
 #include <iostream>
 #include <string>
 #include <vector>
 
-int main(int argc, char* argv[]) 
+int do_main(const std::vector<std::string>& args)
 {
-  if (argc != 2)
+  if (args.size() != 2)
   {
     return 1;
   }
   try
   {
-    const int i{std::stoi(argv[1])};
+    const int i{std::stoi(args[1])};
     switch (i)
     {
       case 1: std::cout << "one\n"; break;
@@ -26,4 +27,21 @@ int main(int argc, char* argv[])
   {
     return 1;
   }
+  return 0;
+}
+
+int main(int argc, char* argv[]) 
+{
+  assert(do_main( { "int_to_word" } ) == 1 );
+  assert(do_main( { "int_to_word", "1" } ) == 0 );
+  assert(do_main( { "int_to_word", "2" } ) == 0 );
+  assert(do_main( { "int_to_word", "3" } ) == 0 );
+  assert(do_main( { "int_to_word", "4" } ) == 0 );
+  assert(do_main( { "int_to_word", "5" } ) == 0 );
+  assert(do_main( { "int_to_word", "6" } ) == 0 );
+  assert(do_main( { "int_to_word", "nonsense" } ) == 1 );
+  assert(do_main( { "int_to_word", "1", "2" } ) == 1 );
+
+  const std::vector<std::string> args(argv, argv + argc);
+  return do_main(args);
 }
